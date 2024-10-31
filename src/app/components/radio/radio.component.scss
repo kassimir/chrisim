@@ -1,0 +1,58 @@
+:host {
+  span {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:hover ~ span {
+      background-color: #ccc;
+    }
+
+    &:checked ~ span {
+      background-image: linear-gradient(135deg, #AAA492, #FFFFFF, #AAA492);
+
+      &::after {
+        display: block;
+      }
+    }
+
+    &:checked:hover ~ span {
+      background-color: initial;
+      filter: initial;
+    }
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: linear-gradient(135deg, #AAA492, #FFFFFF, #AAA492);
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: filter 0.3s ease-in-out;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      top: 5px;
+      left: 5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-image: linear-gradient(135deg, #AAA492, #FFFFFF, #AAA492);
+      filter: brightness(0.8);
+    }
+  }
+}
