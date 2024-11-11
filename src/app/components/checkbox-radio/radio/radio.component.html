@@ -1,0 +1,11 @@
+<label [ngClass]="theme | async">
+  <input
+    type="radio"
+    [name]="name"
+    [value]="label"
+    [checked]="value === label"
+    (change)="onInput($event)"
+  />
+  <span></span>
+  {{label}}
+</label>

@@ -1,0 +1,16 @@
+@import '../../../../styles/variables';
+
+:host {
+  .button {
+    &.metal {
+      background-image: $metal-gradient;
+      text-shadow: 0 0 3px #AAA492;
+      color: #61573a;
+      filter: $filter-amount;
+
+      &:hover {
+        filter: $filter-amount-darker;
+      }
+    }
+  }
+}

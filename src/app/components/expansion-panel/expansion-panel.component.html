@@ -1,0 +1,11 @@
+<div class="container" [ngClass]="theme | async">
+  <div class="header" (click)="expand = !expand">
+    {{header}}
+    <div class="dropdown-arrow" [class.flip]="expand"></div>
+  </div>
+  <div class="content-border" [class.expanded]="expand">
+    <div class="content">
+      <ng-content />
+    </div>
+  </div>
+</div>

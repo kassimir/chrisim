@@ -1,0 +1,34 @@
+// Standard Variables and mixins
+$element-height: 3rem;
+$element-width: 15rem;
+$filter-amount: brightness(0.8);
+$filter-amount-darker: brightness(0.6);
+$thin-padding: 2px;
+$thick-padding: 5px;
+
+@mixin thin-border {
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+}
+
+@mixin thick-border {
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+}
+//THEME VARIABLES AND MIXINS
+// Standard
+$standard-exterior: #666;
+$standard-interior: #c0c0c0;
+// Metal
+$metal-gradient: linear-gradient(135deg, #AAA492, #FFFFFF, #AAA492);
+@mixin metal-interior {
+  box-shadow: inset 0 0 10px #8b8c8c;
+  background-image: $metal-gradient;
+  filter: $filter-amount;
+  text-shadow: 0 0 3px #AAA492;
+  color: #61573a;
+}

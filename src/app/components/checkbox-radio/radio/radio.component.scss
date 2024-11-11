@@ -1,0 +1,7 @@
+@import '../../../../styles/variables';
+
+:host {
+  span, span::after {
+    border-radius: 50%;
+  }
+}

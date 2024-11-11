@@ -1,0 +1,23 @@
+@import '../../../../styles/styles';
+
+:host {
+  label {
+    &.standard {
+      &:hover {
+        filter: $filter-amount;
+      }
+      input {
+        &:checked ~ span {
+          background-color: $standard-exterior;
+        }
+      }
+      span {
+        background-color: $standard-interior;
+
+        &::after {
+          background-color: $standard-interior;
+        }
+      }
+    }
+  }
+}

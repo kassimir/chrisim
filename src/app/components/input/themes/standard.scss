@@ -1,0 +1,14 @@
+@import '../../../../styles/styles';
+
+:host {
+  .container {
+    &.standard {
+      background-color: $standard-exterior;
+
+      input {
+        background-color: $standard-interior;
+        @include thin-border;
+      }
+    }
+  }
+}

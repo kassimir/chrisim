@@ -1,10 +1,49 @@
-<div class="container">
-  <app-input type="text" metal />
-  <br>
-  <app-radio />
-  <br><br>
-  <app-checkbox />
-  <br><br>
-  <app-select [options]="options" />
-</div>
+<div class="container" [ngClass]="theme | async">
+  <form>
+    <app-radio
+      name="theme"
+      [(ngModel)]="selectedTheme"
+      [label]="themeOptions[0]"
+    /><br>
+    <app-radio
+      name="theme"
+      [(ngModel)]="selectedTheme"
+      [label]="themeOptions[1]"
+    /><br><br>
+  </form>
 
+  <form>
+    <app-input
+      [(ngModel)]="inputValue"
+      type="text"
+      name="jamaal"
+      placeholder="name"
+    />
+  </form>
+  <br><br>
+  <app-select [options]="options" [(ngModel)]="selectValue" />
+  <br><br>
+  <app-button>Submit</app-button>
+  <br><br>
+  <app-expansion-panel header="Expansion Panel">
+    This is the song that doesn't end.
+  </app-expansion-panel>
+  <br>
+  <form>
+    @for (radio of radios; track $index) {
+      <app-radio
+        [(ngModel)]="selectedRadio"
+        name="test"
+        [label]="'Option ' + $index"
+      /><br>
+    }
+  </form>
+  <br><br>
+  @for (checkbox of checkboxes; track $index) {
+    <app-checkbox
+      [(ngModel)]="checkboxes[$index]"
+       name="checkbox[{{$index}}]"
+         label="Option {{$index}}"
+       /><br>
+  }
+</div>

@@ -1,0 +1,29 @@
+@import '../../../../styles/styles';
+
+:host {
+  .container {
+    &.standard {
+      .header {
+        border: $thin-padding solid $standard-exterior;
+        background-color: $standard-interior;
+
+        .dropdown-arrow {
+          border-top: 5px solid $standard-exterior;
+        }
+
+        &:hover {
+          filter: $filter-amount;
+        }
+      }
+
+      .content-border {
+        background-color: $standard-exterior;
+
+        .content {
+          margin: 0 $thin-padding $thin-padding $thin-padding;
+          background-color: $standard-interior;
+        }
+      }
+    }
+  }
+}

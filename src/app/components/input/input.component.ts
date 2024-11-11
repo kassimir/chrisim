@@ -1,27 +1,30 @@
-import {Component, Input} from '@angular/core';
-import {NgClass} from '@angular/common';
+import { Component, forwardRef, Input } from '@angular/core';
+import { AsyncPipe, NgClass } from '@angular/common';
+import { NgControlComponent } from '../ng-control/ng-control.component';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Theme } from '../../services/theme.service';
+import {BehaviorSubject} from 'rxjs';
 
 type InputStyle = 'classic' | 'win98' | 'vista' | 'metal';
 
 @Component({
   selector: 'app-input',
   standalone: true,
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => InputComponent),
+      multi: true
+    }
+  ],
   imports: [
-    NgClass
+    NgClass,
+    AsyncPipe
   ],
   templateUrl: './input.component.html',
-  styleUrl: './input.component.scss'
+  styleUrls: ['./input.component.scss', './themes/themes.scss']
 })
-export class InputComponent {
-
-  protected set style(val: InputStyle) {
-    this._style = val;
-  }
-  protected get style(): InputStyle {
-    return this._style;
-  }
-  private _style: InputStyle;
-
+export class InputComponent extends NgControlComponent {
   @Input()
   get alt(): string {
     return this._alt;
@@ -148,15 +151,6 @@ export class InputComponent {
   private _type: string;
 
   @Input()
-  get value(): string {
-    return this._value;
-  }
-  set value(val: string) {
-    this._value = val;
-  }
-  private _value: string = 'Chris Stanley';
-
-  @Input()
   get label(): string {
     return this._label;
   }
@@ -174,14 +168,7 @@ export class InputComponent {
   }
   private _id: string;
 
-  @Input()
-  set metal(_: string) {
-    this.style = 'metal';
+  onInput(event: Event) {
+    this.setValue( (event.target as HTMLInputElement).value);
   }
-
-  @Input()
-  set classic(_: string) {
-    this.style = 'classic';
-  }
-
 }

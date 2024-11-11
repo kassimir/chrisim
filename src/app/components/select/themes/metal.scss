@@ -1,0 +1,26 @@
+@import '../../../../styles/variables';
+
+:host {
+  .container {
+    &.metal {
+      background-image: $metal-gradient;
+
+      .select, span {
+        @include thick-border;
+      }
+
+      .select, .option-container {
+        @include metal-interior;
+      }
+
+      .dropdown {
+        background-image: $metal-gradient;
+        padding: 0 $thick-padding $thick-padding $thick-padding;
+      }
+
+      .dropdown-arrow {
+        border-top: 5px solid #61573a;
+      }
+    }
+  }
+}

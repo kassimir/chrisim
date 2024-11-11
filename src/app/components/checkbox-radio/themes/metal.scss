@@ -1,0 +1,26 @@
+@import '../../../../styles/styles';
+
+:host {
+  label {
+    &.metal {
+      &:hover {
+        filter: $filter-amount;
+      }
+
+      input {
+        &:checked ~ span {
+          background-image: $metal-gradient;
+        }
+      }
+
+      span {
+        background-image: $metal-gradient;
+
+        &::after {
+          background-image: $metal-gradient;
+          filter: $filter-amount;
+        }
+      }
+    }
+  }
+}

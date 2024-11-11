@@ -1,4 +1,9 @@
-<div class="container metal" (click)="showDropDown = !showDropDown">
+<div class="container" [ngClass]="theme | async"
+     (click)="showDropDown = !showDropDown"
+     [class.hover-container]="!showDropDown && hoverContainer"
+     (mouseenter)="containerEnter()"
+     (mouseleave)="containerLeave()"
+>
   <div class="select">
     <span>{{selectDisplay}}</span>
     <div class="dropdown-arrow"></div>
@@ -9,8 +14,8 @@
         <div class="option"
           (mouseenter)="highlight($index)"
           (mouseleave)="unhighlight($index)"
-          (click)="selectItem($index, option.text)"
-          [class.hover]="selectedOptions[$index]"
+          (click)="selectItem($index, option.text, option.value)"
+          [class.hover-option]="selectedOptions[$index]"
         >{{option.text}}</div>
       }
     </div>

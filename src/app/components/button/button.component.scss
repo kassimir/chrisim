@@ -1,0 +1,14 @@
+@import '../../../styles/variables';
+
+:host {
+  .button {
+    height: $element-height;
+    width: $element-width;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.3s ease-in-out;
+    border-radius: 4%;
+    cursor: pointer;
+  }
+}

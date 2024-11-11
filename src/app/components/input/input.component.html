@@ -1,20 +1,23 @@
-<div class="container" [ngClass]="style">
-  <label [for]="name"></label>
-  <input
-    [alt]="alt"
-    [autocapitalize]="autocapitalize"
-    [autocomplete]="autocomplete"
-    [disabled]="disabled"
-    [max]="max"
-    [attr.maxlength]="maxlength"
-    [min]="min"
-    [attr.minlength]="minlength"
-    [name]="name"
-    [pattern]="pattern"
-    [placeholder]="placeholder"
-    [readonly]="readonly"
-    [required]="required"
-    [type]="type"
-    [value]="value"
-  />
+<div class="container" [ngClass]="theme | async">
+  <form>
+    <label [for]="name"></label>
+    <input
+      [alt]="alt"
+      [autocapitalize]="autocapitalize"
+      [autocomplete]="autocomplete"
+      [disabled]="disabled"
+      [max]="max"
+      [attr.maxlength]="maxlength"
+      [min]="min"
+      [attr.minlength]="minlength"
+      [name]="name"
+      [pattern]="pattern"
+      [placeholder]="placeholder"
+      [readonly]="readonly"
+      [required]="required"
+      [type]="type"
+      [value]="value"
+      (input)="onInput($event)"
+    />
+  </form>
 </div>

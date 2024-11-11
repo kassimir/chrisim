@@ -1,0 +1,14 @@
+@import '../../../../styles/variables';
+
+:host {
+  .button {
+    &.standard {
+      background-color: $standard-interior;
+      border: $thin-padding solid $standard-exterior;
+
+      &:hover {
+        filter: $filter-amount;
+      }
+    }
+  }
+}

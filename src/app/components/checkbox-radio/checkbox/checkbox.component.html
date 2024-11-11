@@ -1,0 +1,9 @@
+<label [ngClass]="theme | async">
+  <input
+    type="checkbox"
+    (change)="onInput($event)"
+    [checked]="value"
+  />
+  <span></span>
+  {{label}}
+</label>

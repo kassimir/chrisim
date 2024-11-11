@@ -1,25 +1,30 @@
+@import '../../../styles/variables';
+
 :host {
   .container {
-    height: 3rem;
-    width: 15rem;
+    height: $element-height;
+    width: $element-width;
     border-radius: 4%;
     border: none;
     position: relative;
     transition: filter 0.3s ease-in-out;
+    z-index: 999;
+    cursor: pointer;
+
+    &.hover-container {
+      filter: $filter-amount;
+    }
 
     .select, span {
       outline: none;
       padding-left: 0.5rem;
       border: none;
       position: absolute;
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      span {
-        display: flex;
-        align-items: center;
-      }
+    }
+
+    span {
+      display: flex;
+      align-items: center;
     }
 
     .dropdown {
@@ -27,9 +32,8 @@
       top: calc(3rem - 5px);
       left: 0;
       right: 0;
-      background-image: linear-gradient(135deg, #AAA492, #FFFFFF, #AAA492);
-      padding: 0 5px 5px 5px;
     }
+
     .dropdown-arrow {
       position: absolute;
       right: 0.8rem;
@@ -38,10 +42,6 @@
       height: 0;
       border-left: 5px solid transparent;
       border-right: 5px solid transparent;
-      border-top: 5px solid #61573a;
-    }
-    .option-container {
-      z-index: 99;
     }
 
     .option {
@@ -49,20 +49,9 @@
       background-color: transparent;
     }
 
-    .hover {
+    .hover-option {
       background-color: rgba(0,0,0,0.2);
     }
 
-    &.metal {
-      background-image: linear-gradient(135deg, #AAA492, #FFFFFF, #AAA492);
-
-      .select, .option-container {
-        box-shadow: inset 0 0 10px #8b8c8c;
-        background-image: linear-gradient(135deg, #AAA492, #FFFFFF, #AAA492);
-        filter: brightness(0.8);
-        text-shadow: 0 0 3px #AAA492;
-        color: #61573a;
-      }
-    }
   }
 }

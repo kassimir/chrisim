@@ -1,0 +1,14 @@
+@import '../../../../styles/styles';
+
+:host {
+  .container {
+    &.metal {
+      background-image: $metal-gradient;
+
+      input {
+        @include thick-border;
+        @include metal-interior;
+      }
+    }
+  }
+}

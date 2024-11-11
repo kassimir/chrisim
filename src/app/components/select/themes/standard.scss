@@ -1,0 +1,27 @@
+@import '../../../../styles/variables';
+
+:host {
+  .container {
+    &.standard {
+      background-color: $standard-exterior;
+
+      .select, span {
+        background-color: $standard-interior;
+        @include thin-border;
+      }
+
+      .dropdown {
+        background-color: $standard-exterior;
+        padding: $thin-padding;
+      }
+
+      .dropdown-arrow {
+        border-top: 5px solid $standard-exterior;
+      }
+
+      .option-container {
+        background-color: $standard-interior;
+      }
+    }
+  }
+}
