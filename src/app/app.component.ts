@@ -10,6 +10,7 @@ import { ExpansionPanelComponent } from './components/expansion-panel/expansion-
 import {Theme, ThemeService} from './services/theme.service';
 import {BehaviorSubject} from 'rxjs';
 import {AsyncPipe, NgClass} from '@angular/common';
+import {RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,7 @@ import {AsyncPipe, NgClass} from '@angular/common';
   imports: [
     NgClass,
     AsyncPipe,
+    RouterOutlet,
     FormsModule,
     InputComponent,
     RadioComponent,
@@ -41,33 +43,33 @@ export class AppComponent {
   }
   private _selectedTheme: Theme = 'standard';
 
-  protected inputValue = 'Chris';
-  protected selectValue = 4;
-  protected options = [
-    {
-      text: 'Option 1',
-      value: 1
-    },
-    {
-      text: 'Option 2',
-      value: 2
-    },
-    {
-      text: 'Option 3',
-      value: 3
-    },
-    {
-      text: 'Option 4',
-      value: 4
-    },
-    {
-      text: 'Option 5',
-      value: 5
-    }
-  ]
-  protected checkboxes = [false, false, true, false];
-  protected radios = ['Option 0', 'Option 1', 'Option 2', 'Option 3'];
-  protected selectedRadio = 'Option 0';
+  // protected inputValue = 'Chris';
+  // protected selectValue = 4;
+  // protected options = [
+  //   {
+  //     text: 'Option 1',
+  //     value: 1
+  //   },
+  //   {
+  //     text: 'Option 2',
+  //     value: 2
+  //   },
+  //   {
+  //     text: 'Option 3',
+  //     value: 3
+  //   },
+  //   {
+  //     text: 'Option 4',
+  //     value: 4
+  //   },
+  //   {
+  //     text: 'Option 5',
+  //     value: 5
+  //   }
+  // ]
+  // protected checkboxes = [false, false, true, false];
+  // protected radios = ['Option 0', 'Option 1', 'Option 2', 'Option 3'];
+  // protected selectedRadio = 'Option 0';
 
   constructor() {
     ThemeService.theme.next('standard');
