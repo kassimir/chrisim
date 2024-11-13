@@ -50,7 +50,7 @@ export class ComponentsComponent implements OnInit {
   protected selectedChip = 0;
 
   ngOnInit(): void {
-    this.route.children[0].url
+    this.route.children[0]?.url
       .subscribe((segments) => {
           this.selectedChip = this.componentList.findIndex( c => c === segments.join('/'))
         });
