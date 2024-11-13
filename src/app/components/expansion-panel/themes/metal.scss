@@ -6,6 +6,8 @@
       .header {
         background-image: $metal-gradient;
         filter: $filter-amount;
+        text-shadow: 0 0 3px #AAA492;
+        color: #61573a;
 
         .dropdown-arrow {
           border-top: 5px solid #61573a;
