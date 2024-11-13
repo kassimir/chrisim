@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, Input, ViewEncapsulation} from '@angular/core';
 import {AsyncPipe, NgClass} from '@angular/common';
 import {NgControlComponent} from '../ng-control/ng-control.component';
 
@@ -9,4 +9,13 @@ import {NgControlComponent} from '../ng-control/ng-control.component';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss', './themes/themes.scss']
 })
-export class ButtonComponent extends NgControlComponent {}
+export class ButtonComponent extends NgControlComponent {
+  @Input()
+  protected set id(val: string) {
+    this._id = val;
+  }
+  protected get id(): string {
+    return this._id;
+  }
+  private _id: string = '';
+}

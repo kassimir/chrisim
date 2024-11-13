@@ -1,7 +1,6 @@
 import { Component, forwardRef, Input } from '@angular/core';
 import { InputComponent } from '../../input/input.component';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { NgControlComponent } from '../../ng-control/ng-control.component';
 import { AsyncPipe, NgClass } from '@angular/common';
 
 @Component({
@@ -18,25 +17,9 @@ import { AsyncPipe, NgClass } from '@angular/common';
   templateUrl: './radio.component.html',
   styleUrls: ['../cr.base.component.scss',  './radio.component.scss', '../themes/themes.scss']
 })
-export class RadioComponent extends NgControlComponent {
-  @Input()
-  set label(val: string) {
-    this._label = val;
-  }
-  get label(): string {
-    return this._label;
-  }
-  private _label: string;
-  @Input()
-  set name(val: string) {
-    this._name = val;
-  }
-  get name(): string {
-    return this._name;
-  }
-  private _name: string = '';
+export class RadioComponent extends InputComponent {
 
-  onInput(event: Event) {
+  override onInput(event: Event) {
     this.setValue((event.target as HTMLInputElement).value);
   }
 }

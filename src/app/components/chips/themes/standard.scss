@@ -1,0 +1,16 @@
+@import '../../../../styles/styles';
+
+:host {
+  .container {
+    &.standard {
+      border: $thin-padding solid $standard-exterior;
+      background-color: $standard-interior;
+
+      &.selected {
+        .chip {
+          background-color: $standard-exterior;
+        }
+      }
+    }
+  }
+}

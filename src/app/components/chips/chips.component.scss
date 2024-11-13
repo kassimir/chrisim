@@ -1,0 +1,22 @@
+@import '../../../styles/styles';
+
+:host {
+  .container {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 4px;
+
+    .chip {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    &:hover {
+      filter: $filter-amount;
+    }
+  }
+}

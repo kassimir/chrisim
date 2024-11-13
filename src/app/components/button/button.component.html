@@ -1,1 +1,6 @@
-<div class="button" [ngClass]="theme | async"><ng-content></ng-content></div>
+<div class="button"
+     [ngClass]="theme | async"
+     [id]="id"
+>
+  <ng-content />
+</div>

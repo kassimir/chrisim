@@ -8,6 +8,7 @@ import { ExpansionPanelPageComponent } from './app/pages/expansion-panel-page/ex
 import { InputPageComponent } from './app/pages/input-page/input-page.component';
 import { RadioPageComponent } from './app/pages/radio-page/radio-page.component';
 import { SelectPageComponent } from './app/pages/select-page/select-page.component';
+import { ChipsPageComponent } from './app/pages/chips-page/chips-page.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -15,6 +16,7 @@ export const routes: Routes = [
     children: [
       { path: 'button', component: ButtonPageComponent, outlet: 'components' },
       { path: 'checkbox', component: CheckboxPageComponent, outlet: 'components' },
+      { path: 'chips', component: ChipsPageComponent, outlet: 'components'},
       { path: 'expansion', component: ExpansionPanelPageComponent, outlet: 'components' },
       { path: 'input', component: InputPageComponent, outlet: 'components' },
       { path: 'radio', component: RadioPageComponent, outlet: 'components' },

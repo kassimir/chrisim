@@ -1,15 +1,20 @@
 <header>
     <div class="components">
         @for( comp of componentList; track $index) {
-            <a [routerLink]="[{outlets: { components: [comp] } }]">{{comp}}</a>
+            <app-chip
+                [routerLink]="[{outlets: { components: [comp] } }]"
+                [selected]="selectedChip === $index"
+                (click)="selectedChip = $index"
+            >{{comp}}</app-chip>
         }
     </div>
     <div class="themes">
         @for( theme of themesList; track $index) {
-            <label for="theme">
-              <input type="radio" name="theme" />
-              {{theme}}
-            </label>
+            <app-radio
+              name="theme"
+              [(ngModel)]="selectedTheme"
+              [label]="theme"
+            />
         }
     </div>
 </header>
