@@ -1,3 +1,16 @@
 <header>
-
+    <div class="components">
+        @for( comp of componentList; track $index) {
+            <a [routerLink]="[{outlets: { components: [comp] } }]">{{comp}}</a>
+        }
+    </div>
+    <div class="themes">
+        @for( theme of themesList; track $index) {
+            <label for="theme">
+              <input type="radio" name="theme" />
+              {{theme}}
+            </label>
+        }
+    </div>
 </header>
+<router-outlet name="components"></router-outlet>

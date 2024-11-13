@@ -1,7 +1,20 @@
 :host {
   header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+
+    .components {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      flex-wrap: wrap;
+
+      .button {
+        width: 3rem;
+        height: 2rem
+      }
+    }
   }
 }

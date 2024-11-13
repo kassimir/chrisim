@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgClass, AsyncPipe } from '@angular/common';
+import {Component, ViewEncapsulation} from '@angular/core';
+import {AsyncPipe, NgClass} from '@angular/common';
 import {NgControlComponent} from '../ng-control/ng-control.component';
 
 @Component({
