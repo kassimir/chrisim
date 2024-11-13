@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 
+import { ExpansionPanelComponent } from '../../components/expansion-panel/expansion-panel.component';
+
 @Component({
   selector: 'app-expansion-panel-page',
   standalone: true,
-  imports: [],
+  imports: [ExpansionPanelComponent],
   templateUrl: './expansion-panel-page.component.html',
-  styleUrl: './expansion-panel-page.component.scss'
+  styleUrl: '../pages.main.scss'
 })
-export class ExpansionPanelPageComponent {
-
-}
+export class ExpansionPanelPageComponent {}

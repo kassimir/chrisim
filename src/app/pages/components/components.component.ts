@@ -47,7 +47,7 @@ export class ComponentsComponent implements OnInit {
     'metal'
   ]
 
-  protected selectedChip = 0;
+  protected selectedChip = -1;
 
   ngOnInit(): void {
     this.route.children[0]?.url

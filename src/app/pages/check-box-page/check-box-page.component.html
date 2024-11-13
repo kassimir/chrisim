@@ -1,1 +1,14 @@
-<p>check-box-page works!</p>
+<main>
+    @for (checkbox of checkboxes; track $index) {
+      <app-checkbox
+        [(ngModel)]="checkboxes[$index]"
+        name="checkbox[{{$index}}]"
+        label="Option {{$index}}"
+     />
+    }
+  <h1>Usage</h1>
+  <code>
+    &lt;app-checkbox [(ngModel)]="checkboxModel" name="checkbox" label="My Option" />
+  </code>
+  <a href="https://github.com/kassimir/chrisim/tree/master/src/app/components/checkbox-radio/checkbox">Github Page</a>
+</main>

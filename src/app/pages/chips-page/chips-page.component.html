@@ -1,1 +1,10 @@
-<p>chips-page works!</p>
+<main>
+  @for (chip of chips; track $index) {
+    <app-chip [selected]="$index === selectedChip" (click)="selectedChip = $index">Option {{$index}}</app-chip>
+  }
+  <h1>Usage</h1>
+  <code>
+    &lt;app-chip [selected]="true">My Chip&lt;/app-chip>
+  </code>
+  <a href="https://github.com/kassimir/chrisim/tree/master/src/app/components/chips">Github Page</a>
+</main>

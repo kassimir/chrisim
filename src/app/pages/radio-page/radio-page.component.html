@@ -1,1 +1,14 @@
-<p>radio-page works!</p>
+<main>
+  @for (radio of radios; track $index) {
+    <app-radio
+      [(ngModel)]="selectedRadio"
+      name="test"
+      [label]="'Option ' + $index"
+    />
+  }
+  <h1>Usage</h1>
+  <code>
+    &lt;app-radio [(ngModel)]="selectedRadio" name="radios" [label]="Option 1" />
+  </code>
+  <a href="https://github.com/kassimir/chrisim/tree/master/src/app/components/checkbox-radio/radio">Github Page</a>
+</main>
