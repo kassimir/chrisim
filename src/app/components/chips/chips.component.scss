@@ -4,7 +4,7 @@
   .container {
     width: 5rem;
     height: 2rem;
-    border-radius: 4px;
+    border-radius: $border-radius;
 
     .chip {
       height: 100%;
@@ -16,7 +16,7 @@
     }
 
     &:hover {
-      filter: $filter-amount;
+      filter: $filter-dark;
     }
   }
 }

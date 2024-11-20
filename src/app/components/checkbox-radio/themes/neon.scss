@@ -1,0 +1,24 @@
+@import '../../../../styles/styles';
+
+:host {
+  label {
+    &.neon {
+      input {
+        &:checked ~ span {
+          background: $neon-color-light;
+          //background-image: $metal-gradient;
+        }
+      }
+
+      span {
+        @include neon-container;
+      }
+
+      &:hover {
+        span {
+          @include neon-hover;
+        }
+      }
+    }
+  }
+}

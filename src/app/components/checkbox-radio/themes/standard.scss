@@ -4,7 +4,7 @@
   label {
     &.standard {
       &:hover {
-        filter: $filter-amount;
+        filter: $filter-dark;
       }
       input {
         &:checked ~ span {

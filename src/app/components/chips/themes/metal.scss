@@ -6,14 +6,14 @@
       background-image: $metal-gradient;
       text-shadow: 0 0 3px #AAA492;
       color: #61573a;
-      filter: $filter-amount;
+      filter: $filter-dark;
 
       &:hover {
-        filter: $filter-amount-darker;
+        filter: $filter-darker;
       }
 
       &.selected {
-        filter: $filter-amount-darker;
+        filter: $filter-darker;
       }
     }
   }

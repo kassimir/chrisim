@@ -5,7 +5,7 @@
     &.metal {
       .header {
         background-image: $metal-gradient;
-        filter: $filter-amount;
+        filter: $filter-dark;
         text-shadow: 0 0 3px #AAA492;
         color: #61573a;
 
@@ -14,7 +14,7 @@
         }
 
         &:hover {
-          filter: $filter-amount-darker;
+          filter: $filter-darker;
         }
       }
 

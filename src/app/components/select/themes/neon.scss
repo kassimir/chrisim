@@ -1,0 +1,27 @@
+@import '../../../../styles/variables';
+
+:host {
+  .container {
+    &.neon {
+      @include neon-container;
+
+      .select, span {
+        @include thick-border;
+      }
+
+      .dropdown {
+        @include neon-container;
+        background-color: black;
+        padding: 0 $thick-padding $thick-padding $thick-padding;
+      }
+
+      .dropdown-arrow {
+        border-top: 5px solid $neon-color;
+      }
+
+      .hover-option {
+        background-color: $neon-color-light;
+      }
+    }
+  }
+}

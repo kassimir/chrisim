@@ -1,0 +1,17 @@
+@import '../../../../styles/styles';
+
+:host {
+  .container {
+    &.neon {
+      @include neon-container;
+
+      &:hover {
+        @include neon-hover;
+      }
+
+      &.selected {
+        background: $neon-color-light;
+      }
+    }
+  }
+}

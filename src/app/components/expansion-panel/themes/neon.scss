@@ -1,0 +1,27 @@
+@import '../../../../styles/styles';
+
+:host {
+  .container {
+    &.neon {
+      .header {
+        @include neon-container;
+
+        .dropdown-arrow {
+          border-top: 5px solid $neon-color;
+        }
+
+        &:hover {
+          @include neon-hover;
+        }
+      }
+
+      .content-border {
+        @include neon-container;
+
+        .content {
+          margin: 0 $thick-padding $thick-padding $thick-padding;
+        }
+      }
+    }
+  }
+}

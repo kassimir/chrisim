@@ -1,0 +1,15 @@
+@import '../../../../styles/styles';
+
+:host {
+  .container {
+    &.neon {
+      @include neon-container;
+
+      input {
+        @include thick-border;
+        @include neon-container;
+        background-color: transparent;
+      }
+    }
+  }
+}

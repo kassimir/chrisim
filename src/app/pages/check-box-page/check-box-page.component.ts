@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { CheckboxComponent } from '../../components/checkbox-radio/checkbox/checkbox.component';
 
 @Component({

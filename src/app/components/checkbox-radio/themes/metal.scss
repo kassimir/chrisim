@@ -4,7 +4,7 @@
   label {
     &.metal {
       &:hover {
-        filter: $filter-amount;
+        filter: $filter-dark;
       }
 
       input {
@@ -18,7 +18,7 @@
 
         &::after {
           background-image: $metal-gradient;
-          filter: $filter-amount;
+          filter: $filter-dark;
         }
       }
     }

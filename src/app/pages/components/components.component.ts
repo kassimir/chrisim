@@ -44,7 +44,8 @@ export class ComponentsComponent implements OnInit {
 
   protected readonly themesList = [
     'standard',
-    'metal'
+    'metal',
+    'neon'
   ]
 
   protected selectedChip = -1;

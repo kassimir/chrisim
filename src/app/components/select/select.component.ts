@@ -35,10 +35,18 @@ export class SelectComponent extends NgControlComponent {
   }
   protected _options: Option[]
 
+  protected set selectedIndex(val: number) {
+    this.highlight(val);
+    this._selectedIndex = val;
+  }
+  protected get selectedIndex(): number {
+    return this._selectedIndex;
+  }
+  private _selectedIndex: number = -1;
+
   protected showDropDown: boolean = false;
   protected selectDisplay: string = 'Option 1'
   protected hoverContainer = false;
-  protected selectedIndex: number = 0;
   protected selectedOptions: boolean[] = [];
 
   protected highlight(index: number) {

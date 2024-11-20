@@ -4,7 +4,7 @@
   .container {
     height: $element-height;
     width: $element-width;
-    border-radius: 4%;
+    border-radius: $border-radius;
     border: none;
     position: relative;
     transition: filter 0.3s ease-in-out;
@@ -12,7 +12,7 @@
     cursor: pointer;
 
     &.hover-container {
-      filter: $filter-amount;
+      filter: $filter-dark;
     }
 
     .select, span {
@@ -52,6 +52,5 @@
     .hover-option {
       background-color: rgba(0,0,0,0.2);
     }
-
   }
 }
