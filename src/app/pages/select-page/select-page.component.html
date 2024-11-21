@@ -1,9 +1,11 @@
 <main>
   <app-select [options]="options" [(ngModel)]="selectValue" />
-  <h1>Usage</h1>
+  <h1 [ngClass]="theme | async">Usage</h1>
   <code>
-    &lt;app-select
-      [options]="[&lbrace;text: 'Option 1', value: 1&rbrace;, &lbrace;text: 'Option 2', value: 2&rbrace;]" [(ngModel)]="selectValue">Select Option&lt;/app-button>
+    &lt;app-select <br />
+    &nbsp;&nbsp;[options]="selectOptions" <br />
+    &nbsp;&nbsp;[(ngModel)]="selectValue" <br />
+    />
   </code>
-  <a href="https://github.com/kassimir/chrisim/tree/master/src/app/components/select">Github Page</a>
+  <a [ngClass]="theme | async" href="https://github.com/kassimir/chrisim/tree/master/src/app/components/select">Github Page</a>
 </main>

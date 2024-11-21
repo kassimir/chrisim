@@ -35,6 +35,8 @@ export class SelectComponent extends NgControlComponent {
   }
   protected _options: Option[]
 
+  @Input() default = 'Select Option';
+
   protected set selectedIndex(val: number) {
     this.highlight(val);
     this._selectedIndex = val;

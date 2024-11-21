@@ -2,8 +2,7 @@
 
 :host {
   .container {
-    height: $element-height;
-    width: $element-width;
+    @include responsive-size;
     border-radius: $border-radius;
     border: none;
     position: relative;

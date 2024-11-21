@@ -1,8 +1,10 @@
 <main>
   <app-expansion-panel header="Expansion Panel">This is the expanded content</app-expansion-panel>
-  <h1>Usage</h1>
+  <h1 [ngClass]="theme | async">Usage</h1>
   <code>
-    &lt;app-expansion-panel header="Expansion Panel">This is the expanded content&lt;/app-expansion-panel>
+    &lt;app-expansion-panel header="Expansion Panel"><br />
+    &nbsp;&nbsp;This is the expanded content<br />
+    &lt;/app-expansion-panel>
   </code>
-  <a href="https://github.com/kassimir/chrisim/tree/master/src/app/components/expansion-panel">Github Page</a>
+  <a [ngClass]="theme | async" href="https://github.com/kassimir/chrisim/tree/master/src/app/components/expansion-panel">Github Page</a>
 </main>

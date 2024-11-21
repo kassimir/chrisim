@@ -1,1 +1,12 @@
 @import 'variables';
+
+body {
+  &:not(code) {
+    @include respond('mobile') {
+      font-size: 65%;
+    }
+    @include respond('desktop') {
+      font-size: 1.375rem;
+    }
+  }
+}

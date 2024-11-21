@@ -1,15 +1,17 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgClass, AsyncPipe } from '@angular/common';
 import { SelectComponent } from '../../components/select/select.component';
+import {PageComponent} from '../pages.component';
 
 @Component({
   selector: 'app-select-page',
   standalone: true,
-  imports: [FormsModule, SelectComponent],
+  imports: [FormsModule, NgClass, AsyncPipe, SelectComponent],
   templateUrl: './select-page.component.html',
   styleUrl: '../pages.main.scss'
 })
-export class SelectPageComponent {
+export class SelectPageComponent extends PageComponent {
   protected selectValue = 4;
   protected options = [
     {

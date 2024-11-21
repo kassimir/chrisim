@@ -1,8 +1,8 @@
 <main>
   <app-button>Submit</app-button>
-  <h1>Usage</h1>
+  <h1 [ngClass]="theme | async">Usage</h1>
   <code>
     &lt;app-button>Submit&lt;/app-button>
   </code>
-  <a href="https://github.com/kassimir/chrisim/tree/master/src/app/components/button">Github Page</a>
+  <a [ngClass]="theme | async" href="https://github.com/kassimir/chrisim/tree/master/src/app/components/button">Github Page</a>
 </main>

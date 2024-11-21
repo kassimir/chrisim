@@ -35,17 +35,17 @@ export class ComponentsComponent implements OnInit {
   protected readonly componentList = [
     'button',
     'checkbox',
+    'chips',
     'expansion',
     'input',
     'radio',
-    'select',
-    'chips'
+    'select'
   ];
 
   protected readonly themesList = [
-    'standard',
     'metal',
-    'neon'
+    'neon',
+    'standard'
   ]
 
   protected selectedChip = -1;

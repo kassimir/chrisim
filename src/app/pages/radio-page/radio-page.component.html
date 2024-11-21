@@ -6,9 +6,12 @@
       [label]="'Option ' + $index"
     />
   }
-  <h1>Usage</h1>
+  <h1 [ngClass]="theme | async">Usage</h1>
   <code>
-    &lt;app-radio [(ngModel)]="selectedRadio" name="radios" [label]="Option 1" />
-  </code>
-  <a href="https://github.com/kassimir/chrisim/tree/master/src/app/components/checkbox-radio/radio">Github Page</a>
+    &lt;app-radio <br>
+    &nbsp;&nbsp;[(ngModel)]="selectedRadio" <br>
+    &nbsp;&nbsp;name="radios" <br>
+    &nbsp;&nbsp;[label]="Option 1" <br>
+    /> </code>
+  <a [ngClass]="theme | async" href="https://github.com/kassimir/chrisim/tree/master/src/app/components/checkbox-radio/radio">Github Page</a>
 </main>

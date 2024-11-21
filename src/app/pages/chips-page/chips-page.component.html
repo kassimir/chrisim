@@ -2,9 +2,11 @@
   @for (chip of chips; track $index) {
     <app-chip [selected]="$index === selectedChip" (click)="selectedChip = $index">Option {{$index}}</app-chip>
   }
-  <h1>Usage</h1>
+  <h1 [ngClass]="theme | async">Usage</h1>
   <code>
-    &lt;app-chip [selected]="true">My Chip&lt;/app-chip>
+    &lt;app-chip [selected]="true"> <br />
+    &nbsp;&nbsp;My Chip <br />
+    &lt;/app-chip>
   </code>
-  <a href="https://github.com/kassimir/chrisim/tree/master/src/app/components/chips">Github Page</a>
+  <a [ngClass]="theme | async" href="https://github.com/kassimir/chrisim/tree/master/src/app/components/chips">Github Page</a>
 </main>

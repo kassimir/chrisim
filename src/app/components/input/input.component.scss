@@ -2,8 +2,7 @@
 
 :host {
   .container {
-    height: $element-height;
-    width: $element-width;
+    @include responsive-size;
     border-radius: $border-radius;
     border: none;
     position: relative;
@@ -23,6 +22,10 @@
       padding-left: 0.5rem;
       border: none;
       position: absolute;
+
+      @include respond('mobile') {
+        font-size: 65%;
+      }
     }
   }
 }

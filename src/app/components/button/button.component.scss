@@ -2,8 +2,8 @@
 
 :host {
   .button {
-    height: $element-height;
-    width: $element-width;
+   @include responsive-size;
+
     display: flex;
     align-items: center;
     justify-content: center;

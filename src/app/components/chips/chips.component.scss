@@ -2,8 +2,14 @@
 
 :host {
   .container {
-    width: 5rem;
-    height: 2rem;
+    @include respond('mobile') {
+      width: 3rem;
+      height: 1rem;
+    }
+    @include respond('desktop') {
+      width: 5rem;
+      height: 2rem;
+    }
     border-radius: $border-radius;
 
     .chip {

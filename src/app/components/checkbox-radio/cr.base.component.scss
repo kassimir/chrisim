@@ -19,8 +19,14 @@
   }
 
   span {
-    height: 1.5rem;
-    width: 1.5rem;
+    @include respond('mobile') {
+      height: 1rem;
+      width: 1rem;
+    }
+    @include respond('desktop') {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
     position: relative;
     display: inline-block;
     margin-right: 10px;
@@ -31,10 +37,12 @@
       content: "";
       position: absolute;
       display: none;
-      top: .25rem;
-      left: .25rem;
-      width: 1rem;
-      height: 1rem;
+      @include respond('desktop') {
+        top: .25rem;
+        left: .25rem;
+        width: 1rem;
+        height: 1rem;
+      }
     }
   }
 }

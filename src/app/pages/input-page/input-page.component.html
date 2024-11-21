@@ -1,8 +1,11 @@
 <main>
   <app-input [(ngModel)]="input" />
-  <h1>Usage</h1>
+  <h1 [ngClass]="theme | async">Usage</h1>
   <code>
-    &lt;app-input [(ngModel)]="inputValue" placeholder="Name"/>
+    &lt;app-input <br />
+    &nbsp;&nbsp;[(ngModel)]="inputValue" <br />
+    &nbsp;&nbsp;placeholder="Name" <br />
+    />
   </code>
-  <a href="https://github.com/kassimir/chrisim/tree/master/src/app/components/input">Github Page</a>
+  <a [ngClass]="theme | async" href="https://github.com/kassimir/chrisim/tree/master/src/app/components/input">Github Page</a>
 </main>

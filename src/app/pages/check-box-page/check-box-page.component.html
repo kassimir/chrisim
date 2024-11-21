@@ -6,9 +6,13 @@
         label="Option {{$index}}"
      />
     }
-  <h1>Usage</h1>
+  <h1 [ngClass]="theme | async">Usage</h1>
   <code>
-    &lt;app-checkbox [(ngModel)]="checkboxModel" name="checkbox" label="My Option" />
+    &lt;app-checkbox <br>
+      &nbsp;&nbsp;[(ngModel)]="checkboxModel" <br />
+      &nbsp;&nbsp;name="checkbox" <br />
+      &nbsp;&nbsp;label="My Option" <br />
+    />
   </code>
-  <a href="https://github.com/kassimir/chrisim/tree/master/src/app/components/checkbox-radio/checkbox">Github Page</a>
+  <a [ngClass]="theme | async" href="https://github.com/kassimir/chrisim/tree/master/src/app/components/checkbox-radio/checkbox">Github Page</a>
 </main>
