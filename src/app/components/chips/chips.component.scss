@@ -3,12 +3,13 @@
 :host {
   .container {
     @include respond('mobile') {
-      width: 3rem;
+      width: 3.5rem;
       height: 1rem;
     }
     @include respond('desktop') {
-      width: 5rem;
+      width: 6rem;
       height: 2rem;
+      font-size: 80%;
     }
     border-radius: $border-radius;
 
@@ -22,7 +23,7 @@
     }
 
     &:hover {
-      filter: $filter-dark;
+      @include neon-hover;
     }
   }
 }

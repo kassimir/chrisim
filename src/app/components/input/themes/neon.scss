@@ -7,7 +7,7 @@
 
       input {
         @include thick-border;
-        @include neon-container;
+        color: $neon-color;
         background-color: transparent;
       }
     }

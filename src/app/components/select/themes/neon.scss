@@ -9,6 +9,10 @@
         @include thick-border;
       }
 
+      &.hover-container {
+        @include neon-hover;
+      }
+
       .dropdown {
         @include neon-container;
         background-color: black;

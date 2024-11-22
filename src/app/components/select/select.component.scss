@@ -10,10 +10,6 @@
     z-index: 999;
     cursor: pointer;
 
-    &.hover-container {
-      filter: $filter-dark;
-    }
-
     .select, span {
       outline: none;
       padding-left: 0.5rem;

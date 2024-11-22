@@ -10,6 +10,10 @@
         @include thin-border;
       }
 
+      &.hover-container {
+        filter: $filter-dark;
+      }
+
       .dropdown {
         background-color: $standard-exterior;
         padding: $thin-padding;

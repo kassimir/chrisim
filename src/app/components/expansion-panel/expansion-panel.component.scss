@@ -4,22 +4,18 @@
   .container {
     @include respond('mobile') {
       width: 10rem;
+      .header {
+        height: $element-height-m;
+      }
     }
     @include respond('desktop') {
       width: 20rem;
+      .header {
+        height: $element-height-d;
+      }
     }
 
     .header {
-      @include respond('mobile') {
-        height: $element-height-m;
-
-        .dropdown-arrow {
-          display: none;
-        }
-      }
-      @include respond('desktop') {
-        height: $element-height-d;
-      }
       display: flex;
       padding-left: 1rem;
       align-items: center;
@@ -31,7 +27,7 @@
 
       .dropdown-arrow {
         position: absolute;
-        top: 1.5em;
+        top: 45%;
         right: 0.8em;
         width: 0;
         height: 0;
