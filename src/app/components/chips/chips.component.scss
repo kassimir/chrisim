@@ -21,9 +21,5 @@
       align-items: center;
       cursor: pointer;
     }
-
-    &:hover {
-      @include neon-hover;
-    }
   }
 }

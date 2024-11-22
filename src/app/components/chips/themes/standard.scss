@@ -11,6 +11,10 @@
           background-color: $standard-exterior;
         }
       }
+
+      &:hover:not(.selected) {
+        filter: $filter-dark;
+      }
     }
   }
 }
