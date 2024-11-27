@@ -16,7 +16,7 @@ import { AsyncPipe, NgClass } from '@angular/common';
   ],
   imports: [NgClass, AsyncPipe],
   templateUrl: './checkbox.component.html',
-  styleUrls: ['../cr.base.component.scss', './checkbox.component.scss', '../themes/themes.scss']
+  styleUrls: ['../cr.base.component.scss', './checkbox.component.scss', '../themes/cr.themes.scss']
 })
 export class CheckboxComponent extends InputComponent {
   override onInput(event: Event) {

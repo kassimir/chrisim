@@ -20,7 +20,7 @@ type Option = {
   ],
   imports: [NgIf, NgClass, AsyncPipe],
   templateUrl: './select.component.html',
-  styleUrls: ['./select.component.scss', './themes/themes.scss']
+  styleUrls: ['./select.component.scss', './themes/select.themes.scss']
 })
 export class SelectComponent extends NgControlComponent {
   @Input()

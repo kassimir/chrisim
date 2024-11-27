@@ -22,7 +22,7 @@ type InputStyle = 'classic' | 'win98' | 'vista' | 'metal';
     AsyncPipe
   ],
   templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss', './themes/themes.scss']
+  styleUrls: ['./input.component.scss', './themes/input.themes.scss']
 })
 export class InputComponent extends NgControlComponent {
   @Input()

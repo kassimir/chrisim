@@ -15,7 +15,7 @@ import { NgClass, AsyncPipe } from '@angular/common';
   ],
   imports: [NgClass, AsyncPipe],
   templateUrl: './expansion-panel.component.html',
-  styleUrls: ['./expansion-panel.component.scss', 'themes/themes.scss']
+  styleUrls: ['./expansion-panel.component.scss', 'themes/expansion.themes.scss']
 })
 export class ExpansionPanelComponent extends NgControlComponent {
   @Input() header: string = '';

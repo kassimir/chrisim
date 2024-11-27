@@ -15,7 +15,7 @@ import { AsyncPipe, NgClass } from '@angular/common';
   ],
   imports: [NgClass, AsyncPipe],
   templateUrl: './radio.component.html',
-  styleUrls: ['../cr.base.component.scss',  './radio.component.scss', '../themes/themes.scss']
+  styleUrls: ['../cr.base.component.scss',  './radio.component.scss', '../themes/cr.themes.scss']
 })
 export class RadioComponent extends InputComponent {
 

@@ -7,7 +7,7 @@ import {NgControlComponent} from '../ng-control/ng-control.component';
   standalone: true,
   imports: [NgClass, AsyncPipe],
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss', './themes/themes.scss']
+  styleUrls: ['./button.component.scss', './themes/button.themes.scss']
 })
 export class ButtonComponent extends NgControlComponent {
   @Input()
