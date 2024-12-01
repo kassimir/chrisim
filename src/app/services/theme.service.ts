@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
-export type Theme = 'standard' | 'metal';
+export type Theme = 'frutiger' | 'metal' | 'neon' | 'standard';
 
 @Injectable({
   providedIn: 'root'

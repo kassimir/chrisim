@@ -2,22 +2,21 @@
 
 :host {
   label {
-    &.metal {
+    &.frutiger {
       &:hover {
         filter: $filter-dark;
       }
-
       span {
-        background-image: $metal-gradient;
+        background-image: $frutiger-gradient;
 
         &::after {
-          background-image: $metal-gradient;
+          background-image: $frutiger-gradient;
           filter: $filter-dark;
         }
 
         &.checked::after {
           background-image: none;
-          background-color: $metal-solid-light;
+          background-color: $frutiger-solid-light;
         }
       }
     }

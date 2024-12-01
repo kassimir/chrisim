@@ -1,0 +1,19 @@
+@import '../../../../styles/styles';
+
+:host {
+  .container {
+    &.frutiger {
+      background-image: $frutiger-gradient;
+      text-shadow: 0 0 3px $frutiger-solid-darkest;
+      color: $frutiger-font;
+
+      &:hover {
+        filter: $filter-dark;
+      }
+
+      &.selected {
+        filter: $filter-dark;
+      }
+    }
+  }
+}

@@ -68,6 +68,9 @@ $border-radius: 0.25em;
       &.neon {
         color: $neon-color;
       }
+      &.frutiger {
+        color: $frutiger-solid-dark;
+      }
     }
   }
 }
@@ -86,8 +89,8 @@ $metal-gradient: linear-gradient(135deg, $metal-solid-light, #FFFFFF, $metal-sol
   box-shadow: inset 0 0 10px #8b8c8c;
   background-image: $metal-gradient;
   filter: $filter-dark;
-  text-shadow: 0 0 3px #AAA492;
-  color: #61573a;
+  text-shadow: 0 0 3px $metal-solid-light;
+  color: $metal-solid-dark;
 }
 
 //Neon
@@ -103,4 +106,20 @@ $neon-color-light: hsl(317, 100%, 54%, 0.5);
 @mixin neon-hover {
   text-shadow: 0 0 0.75em $neon-color;
   box-shadow: inset 0 0 0.75em 0 $neon-color, 0 0 0.75em 0 $neon-color;
+}
+
+//frutiger
+$frutiger-solid-bright: #FFFFFF;
+$frutiger-solid-light: #9FDBFA;
+$frutiger-solid-dark: #075da4;
+$frutiger-solid-darkest: #3E4952;
+
+$frutiger-gradient: linear-gradient(0deg, $frutiger-solid-darkest 0%, $frutiger-solid-dark 43%, white 70%, $frutiger-solid-light 100%);
+$frutiger-font: white;
+
+@mixin frutiger-interior {
+  box-shadow: inset 0 0 10px $frutiger-solid-darkest;
+  background-color: $frutiger-solid-light;
+  text-shadow: 0 0 3px $frutiger-solid-darkest;
+  color: $frutiger-font;
 }

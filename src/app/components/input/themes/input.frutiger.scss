@@ -1,0 +1,14 @@
+@import '../../../../styles/styles';
+
+:host {
+  .container {
+    &.frutiger {
+      background-image: $frutiger-gradient;
+
+      input {
+        @include thick-border;
+        @include frutiger-interior;
+      }
+    }
+  }
+}

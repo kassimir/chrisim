@@ -1,0 +1,30 @@
+@import '../../../../styles/styles';
+
+:host {
+  .container {
+    &.frutiger {
+      .header {
+        background-image: $frutiger-gradient;
+        text-shadow: 0 0 3px $frutiger-solid-darkest;
+        color: $frutiger-font;
+
+        .dropdown-arrow {
+          border-top: 5px solid $frutiger-solid-darkest;
+        }
+
+        &:hover {
+          filter: $filter-dark;
+        }
+      }
+
+      .content-border {
+        background-image: $frutiger-gradient;
+
+        .content {
+          margin: 0 $thick-padding $thick-padding $thick-padding;
+          @include frutiger-interior;
+        }
+      }
+    }
+  }
+}

@@ -4,8 +4,8 @@
   .button {
     &.metal {
       background-image: $metal-gradient;
-      text-shadow: 0 0 3px #AAA492;
-      color: #61573a;
+      text-shadow: 0 0 3px $metal-solid-light;
+      color: $metal-solid-dark;
       filter: $filter-dark;
 
       &:hover {

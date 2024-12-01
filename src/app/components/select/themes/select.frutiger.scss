@@ -2,15 +2,15 @@
 
 :host {
   .container {
-    &.metal {
-      background-image: $metal-gradient;
+    &.frutiger {
+      background-image: $frutiger-gradient;
 
       .select, span {
         @include thick-border;
       }
 
       .select, .option-container {
-        @include metal-interior;
+        @include frutiger-interior;
       }
 
       &.hover-container {
@@ -18,12 +18,12 @@
       }
 
       .dropdown {
-        background-image: $metal-gradient;
         padding: 0 $thick-padding $thick-padding $thick-padding;
+        background-color: $frutiger-solid-darkest;
       }
 
       .dropdown-arrow {
-        border-top: 5px solid $metal-solid-dark;
+        border-top: 5px solid $frutiger-solid-darkest;
       }
     }
   }

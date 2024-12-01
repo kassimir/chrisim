@@ -1,0 +1,15 @@
+@import '../../../../styles/variables';
+
+:host {
+  .button {
+    &.frutiger {
+      background-image: $frutiger-gradient;
+      text-shadow: 0 0 3px $frutiger-solid-darkest;
+      color: $frutiger-font;
+
+      &:hover {
+        filter: $filter-dark;
+      }
+    }
+  }
+}

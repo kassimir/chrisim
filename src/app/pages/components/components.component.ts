@@ -43,6 +43,7 @@ export class ComponentsComponent implements OnInit {
   ];
 
   protected readonly themesList = [
+    'frutiger',
     'metal',
     'neon',
     'standard'

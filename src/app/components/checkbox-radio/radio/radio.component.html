@@ -6,6 +6,6 @@
     [checked]="value === label"
     (change)="onInput($event)"
   />
-  <span></span>
+  <span [ngClass]="{'checked' : value === label}"></span>
   {{label}}
 </label>
