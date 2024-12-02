@@ -20,7 +20,6 @@ export class ColorSelectorComponent {
       const rgb = this.hexToRgb(val);
       if (rgb) {
         const brightness = (rgb[0] * 0.299) + (rgb[1] * 0.587) + (rgb[2] * 0.114);
-        console.log(brightness)
         const fontColor = brightness > 105 ? 'black' : 'white';
         ColorSelectorService.fontColor.next(fontColor);
       }
