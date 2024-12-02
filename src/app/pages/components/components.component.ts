@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RadioComponent } from '../../components/checkbox-radio/radio/radio.component';
 import { ChipComponent } from '../../components/chips/chip.component';
 import { Theme, ThemeService } from '../../services/theme.service';
+import {ColorSelectorComponent} from '../../components/color-selector/color-selector.component';
 
 @Component({
   selector: 'app-components',
@@ -14,7 +15,8 @@ import { Theme, ThemeService } from '../../services/theme.service';
     RouterLink,
     RouterOutlet,
     ChipComponent,
-    RadioComponent
+    RadioComponent,
+    ColorSelectorComponent
   ],
   templateUrl: './components.component.html',
   styleUrl: './components.component.scss'
