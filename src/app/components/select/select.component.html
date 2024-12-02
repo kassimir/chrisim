@@ -12,6 +12,7 @@
     <div class="option-container">
       @for(option of options; track option.value) {
         <div class="option"
+          [ngClass]="{'backgroundColor': bgColor | async}"
           (mouseenter)="highlight($index)"
           (mouseleave)="unhighlight($index)"
           (click)="selectItem($index, option.text, option.value)"

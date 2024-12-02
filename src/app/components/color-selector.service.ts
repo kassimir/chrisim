@@ -5,6 +5,6 @@ import {BehaviorSubject} from 'rxjs';
   providedIn: 'root'
 })
 export class ColorSelectorService {
-  public static bgColor: BehaviorSubject<string | null> = new BehaviorSubject<string | null>(null);
+  public static bgColor: BehaviorSubject<string> = new BehaviorSubject<string>('#000000');
   public static fontColor: BehaviorSubject<string> = new BehaviorSubject<string>('white');
 }

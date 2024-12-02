@@ -1,7 +1,9 @@
 import { Component, forwardRef, Input } from '@angular/core';
-import { AsyncPipe, NgClass, NgIf } from '@angular/common';
+import { AsyncPipe, NgClass, NgStyle, NgIf } from '@angular/common';
 import { NgControlComponent } from '../ng-control/ng-control.component';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import {ColorSelectorService} from '../color-selector.service';
+import {BehaviorSubject} from 'rxjs';
 
 type Option = {
   text: string;
@@ -18,11 +20,12 @@ type Option = {
       multi: true
     }
   ],
-  imports: [NgIf, NgClass, AsyncPipe],
+  imports: [NgIf, NgClass, NgStyle, AsyncPipe],
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.scss', './themes/select.themes.scss']
 })
 export class SelectComponent extends NgControlComponent {
+  protected bgColor: BehaviorSubject<string> = ColorSelectorService.bgColor;
   @Input()
   set options(val: Option[]) {
     this._options = val.map( (v: Option, i: number) => {

@@ -10,15 +10,14 @@ import { ButtonComponent } from './components/button/button.component';
 import { ExpansionPanelComponent } from './components/expansion-panel/expansion-panel.component';
 import { Theme, ThemeService } from './services/theme.service';
 import { BehaviorSubject } from 'rxjs';
-import { AsyncPipe, NgClass, NgStyle } from '@angular/common';
+import { AsyncPipe, NgStyle } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import {ColorSelectorService} from './components/color-selector.service';
+import { ColorSelectorService } from './components/color-selector.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    NgClass,
     NgStyle,
     AsyncPipe,
     RouterOutlet,
@@ -37,7 +36,7 @@ import {ColorSelectorService} from './components/color-selector.service';
 })
 export class AppComponent {
   protected theme: BehaviorSubject<Theme> = ThemeService.theme;
-  protected bgColor: BehaviorSubject<string | null> = ColorSelectorService.bgColor;
+  protected bgColor: BehaviorSubject<string> = ColorSelectorService.bgColor;
   protected fontColor: BehaviorSubject<string> = ColorSelectorService.fontColor;
   protected themeOptions = ['standard', 'metal'];
   protected set selectedTheme(val: Theme) {
